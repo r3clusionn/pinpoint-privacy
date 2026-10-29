@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pinpoint — Privacy Policy</title>
+<meta name="description" content="How Pinpoint, the aim trainer, collects, uses and keeps your data. Last updated 28 October 2026.">
+<style>
+:root { --bg: #fbfbfa; --fg: #1d1d1f; --dim: #5b5b60; --rule: #e2e2e0; --accent: #b4321e; --code: #f0efec; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #131315; --fg: #e8e8ea; --dim: #a0a0a8; --rule: #2c2c31; --accent: #ff7a5c; --code: #1f1f23; }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg);
+       font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+main { max-width: 46rem; margin: 0 auto; padding: 3rem 16px 4rem; }
+h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 1.25rem; letter-spacing: -0.01em; }
+h2 { font-size: 1.2rem; margin: 2.5rem 0 0.75rem; padding-top: 0.25rem; }
+p, li { margin: 0 0 0.75rem; }
+ul { padding-left: 1.25rem; margin: 0 0 1rem; }
+.meta { color: var(--dim); margin-bottom: 0.25rem; }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
+a { color: var(--accent); text-underline-offset: 2px; }
+code { background: var(--code); padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.9em;
+       font-family: ui-monospace, Consolas, monospace; overflow-wrap: anywhere; }
+.table { overflow-x: auto; margin: 0 0 1rem; }
+table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.55rem 0.75rem 0.55rem 0; border-bottom: 1px solid var(--rule); }
+th { font-weight: 600; }
+td:first-child { white-space: nowrap; padding-right: 1.25rem; }
+@media (max-width: 560px) { td:first-child { white-space: normal; } }
+</style>
+</head>
+<body>
+<main>
+<h1>Pinpoint — Privacy Policy</h1>
+<p class="meta"><strong>Last updated:</strong> 28 October 2026</p>
+<p><strong>Who we are:</strong> Pinpoint is made by r3clusionn, an independent developer in Canada. "We" below means r3clusionn. Questions and requests go to a ticket in our Discord server, <strong>Aim Theory</strong> (<a href="#s8">§8</a>).</p>
+<hr>
+<h2 id="s1">1. The short version</h2>
+<ul>
+<li>Pinpoint is an aim trainer. To put your scores on leaderboards and stop cheating, the game sends each run you choose to play online to our server, which replays it to check the score.</li>
+<li>We store your account (your chosen username and your sign-in identity), every scored run's summary, a short-lived recording of your cursor path, and some facts about your PC that help catch cheats.</li>
+<li>We do not sell your data, show you ads, or use it to profile you for anyone else.</li>
+<li>You can delete your account from inside the game. Your name and everything that identifies you is removed; your scores stay on the leaderboards as "Deleted player #N" (<a href="#s7">§7</a>).</li>
+<li>Playing offline sends nothing to us.</li>
+</ul>
+<h2 id="s2">2. What we collect, and why</h2>
+<p><strong>Your account</strong></p>
+<ul>
+<li><strong>Your sign-in identity:</strong> your Discord account id, Discord username and avatar (from Discord's sign-in). Discord's consent screen also asks for your email address — Supabase, our sign-in provider, always requests it — <strong>but we delete it on every sign-in and never keep it.</strong> If you use the in-game username login instead, we store that username and your password (hashed by our sign-in provider; we never see it).</li>
+<li><strong>The username you choose</strong> in the game, when you changed it, and when you joined.</li>
+<li><strong>Your account's standing:</strong> your trust level, and any moderation action taken on your account (warnings, voided runs, bans) with its reason.</li>
+</ul>
+<p><strong>Your runs</strong> (only runs played online and submitted)</p>
+<ul>
+<li><strong>A summary of each run:</strong> the scenario, the time, your score, how long it lasted, hits, misses and losses, and whether it was verified. These make up your profile, your personal bests and the leaderboards.</li>
+<li><strong>A recording of the run:</strong> your cursor's position on every game tick and the raw motion your mouse reported. We replay it to check the score, and keep it only for a limited time (<a href="#s5">§5</a>).</li>
+<li><strong>Facts about your PC at the time of the run</strong>, used only to detect cheating: the game's build and your Windows version; your screen width, display scale and mode, sensitivity, zoom and frame-rate settings; counts of mouse input events and whether any were injected by software; how the game's clocks compared; how many program modules and threads were running in the game's process, and <strong>the file names (not contents) of up to eight</strong> modules from outside Windows' standard locations or without a signature; whether a debugger was attached.</li>
+<li><strong>When the run started and ended</strong>, as seen by our server, to detect speed or slow-motion hacks.</li>
+</ul>
+<p><strong>A machine fingerprint</strong></p>
+<ul>
+<li><strong>A salted hash of your PC's hardware identifiers.</strong> It is hashed on your PC and hashed again on our server with a secret; the raw identifiers never leave your PC and cannot be recovered from the hash. It lets us see when several accounts are played on one PC, which is how a banned player is recognised.</li>
+</ul>
+<p><strong>If you publish a scenario or report one</strong>: the scenario and your authorship; your report and its reason.</p>
+<p><strong>Request logs</strong>: our hosting providers (<a href="#s4">§4</a>) record technical request data such as IP addresses for their own operation and security, under their own retention.</p>
+<p><strong>On your PC only</strong> (never sent to us): your settings, run history and personal bests, the per-second graphs of your runs, your themes and scenarios. They are in <code>%LOCALAPPDATA%\Pinpoint</code>; deleting that folder deletes them. Your history and personal bests on your PC are encrypted, and <strong>we keep a copy of the key</strong> for each account that signs in on that PC, so the files still open after a Windows reinstall or on another PC. We never receive the files themselves. Deleting your account deletes the keys we hold.</p>
+<h2 id="s3">3. Why we are allowed to</h2>
+<ul>
+<li><strong>To provide the game you asked for</strong> — your account, verifying runs, leaderboards (for players in the EU/UK: contract).</li>
+<li><strong>To keep leaderboards fair</strong> — anti-cheat facts, the machine fingerprint, run recordings, moderation records (our and other players' legitimate interest in fair competition).</li>
+<li><strong>To keep the service running and secure</strong> — request logs, backups (legitimate interest).</li>
+</ul>
+<p><strong>Players in Canada:</strong> we collect and use this information with your consent, which you give by signing in and playing online, and only for the purposes above. You can withdraw it at any time by deleting your account (<a href="#s7">§7</a>); you can keep playing offline without it.</p>
+<h2 id="s4">4. Who processes it for us</h2>
+<ul>
+<li><strong>Supabase</strong> — our database and sign-in (hosted in the United States, us-east-2).</li>
+<li><strong>Cloudflare R2</strong> — storage for run recordings and daily backups.</li>
+<li><strong>Discord</strong> — sign-in, until Steam sign-in replaces it; and moderation alerts to a private channel only our moderators can read (a username, a run id and why it was flagged).</li>
+<li><strong>GitHub</strong> — where the game is downloaded from, and where this page is hosted.</li>
+</ul>
+<p>Some of these are in the United States; data sent to them is protected by their standard data processing terms, and may be accessible to authorities there under United States law.</p>
+<h2 id="s5">5. How long we keep it</h2>
+<div class="table"><table>
+<thead><tr><th>what</th><th>how long</th></tr></thead><tbody>
+<tr><td>Your account and run summaries</td><td>while your account exists; after deletion, scores stay anonymised (<a href="#s7">§7</a>)</td></tr>
+<tr><td>Run recordings</td><td>7 days for an ordinary personal best; 14 days for other runs kept as samples; 30 days for runs in the top 100 or flagged for review; <strong>as long as the run stays in a leaderboard's top 25</strong>; a run held for review until a moderator decides</td></tr>
+<tr><td>Per-run PC facts</td><td><strong>7 days</strong> for an ordinary run (the run's recent record is deleted; its summary is kept in your account's ledger); longer only while a run is under review, flagged, or its recording is still kept as evidence</td></tr>
+<tr><td>Machine fingerprint</td><td>while your account exists; for a banned account, see <a href="#s6">§6</a></td></tr>
+<tr><td>Daily backups</td><td>15 days</td></tr>
+<tr><td>Request logs</td><td>by our providers, under their own retention</td></tr>
+</tbody></table></div>
+<p>We do not delete accounts for inactivity.</p>
+<h2 id="s6">6. Bans</h2>
+<p>If an account is banned for cheating and then deleted, we keep a <strong>minimal ban record permanently</strong>: the salted machine fingerprint, the sign-in platform's account id, the date and the reason — no username, no runs. It exists only so a banned player cannot return by deleting their account and signing up again.</p>
+<h2 id="s7">7. Your rights, and deleting your account</h2>
+<p>You can ask to <strong>see</strong> the data we hold about you, <strong>correct</strong> it (your username can be changed in the game), <strong>object</strong> to our use of it, or <strong>delete</strong> it, by opening a ticket (<a href="#s8">§8</a>). We answer within 30 days.</p>
+<p><strong>Deleting your account</strong> — the <strong>Delete Account</strong> button on your profile in the game, or a ticket — removes: your sign-in identity, username and avatar; your machine fingerprint; every run recording; the PC facts stored with your runs; your reports; your authorship of any published scenario (the scenario stays, unattributed). <strong>Your scores are not deleted:</strong> they stay on the leaderboards, and in totals and rankings, as <strong>"Deleted player #N"</strong>, with nothing that leads back to you. A run under review is decided first. Copies in our backups are gone within 15 days.</p>
+<p>Deleting your account does not delete the files on your own PC (<a href="#s2">§2</a>).</p>
+<h2 id="s8">8. Contact</h2>
+<p>Open a ticket in the <strong>Aim Theory</strong> Discord server. Players in Canada may also complain to the <strong>Office of the Privacy Commissioner of Canada</strong> (<a href="https://www.priv.gc.ca/">priv.gc.ca</a>); players in the EU/UK to their data protection authority.</p>
+<h2 id="s9">9. Children</h2>
+<p>Pinpoint is not directed at children under 13 and we do not knowingly collect their data. If your country requires a parent's consent at your age to use an online service, you need that consent to play online.</p>
+<h2 id="s10">10. Changes</h2>
+<p>When this policy changes we will update the date above and say so in the game's release notes.</p>
+</main>
+</body>
+</html>
